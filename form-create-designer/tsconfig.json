@@ -1,9 +1,11 @@
 {
 	"compilerOptions": {
+		"rootDir": "./", // 根目录设置为当前项目根目录
+		"outDir": "dist", // 输出目录
 		"target": "ESNext",
 		"sourceMap": true,
 		"allowUnreachableCode": true,
-    "allowSyntheticDefaultImports": true,
+		"allowSyntheticDefaultImports": true,
 		"allowJs": true,
 		"experimentalDecorators": true,
 		"moduleResolution": "node",
@@ -13,8 +15,11 @@
 		"jsx": "preserve"
 	},
 	"include": [
-		"*.vue",
-		"*",
-    "types/typing.d.ts"
+		"src/**/*", // 包括 src 目录中的所有文件
+		"../RuoYi-Vue/src/**/**" // 包括 RuoYi-Vue 中的所有文件
+	],
+	"exclude": [
+		"dist",
+		"node_modules"
 	]
 }
